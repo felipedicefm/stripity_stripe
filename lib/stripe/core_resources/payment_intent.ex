@@ -236,7 +236,8 @@ defmodule Stripe.PaymentIntent do
                  optional(:save_payment_method) => boolean,
                  optional(:shipping) => Stripe.Types.shipping(),
                  optional(:source) => Stripe.id() | Stripe.Card.t(),
-                 optional(:payment_method) => Stripe.id() | Stripe.PaymentMethod.t()
+                 optional(:payment_method) => Stripe.id() | Stripe.PaymentMethod.t(),
+                 optional(:radar_options) => map()
                }
                | %{}
   def confirm(id, params, opts \\ []) do
